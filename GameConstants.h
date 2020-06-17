@@ -20,4 +20,12 @@ enum eventTypes{
     DEVBULLET
 };
 
+enum gameState{
+    START,
+    PLAYING,
+    PAUSED,
+    VICTORY,
+    DEFEAT
+};
+
 #endif //SPACEINVADERS_GAMECONSTANTS_H

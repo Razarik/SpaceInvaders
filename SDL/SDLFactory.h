@@ -15,6 +15,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
+#include <SDL2/SDL_mixer.h>
 #include <string>
 
 
@@ -28,6 +29,10 @@ namespace Si_sdl {
         TTF_Font *font = nullptr;
         bool blink;
         int blinkCounter;
+        Mix_Chunk *pew;
+        Mix_Chunk *gameOver;
+        Mix_Chunk *victory;
+        std::string pauseMessage;
     public:
         SDLFactory();
 
@@ -53,7 +58,9 @@ namespace Si_sdl {
 
         void showLives(int lives);
 
-        void textScreen(std::string text);
+        void textScreen();
+
+        void setState(int state, int score);
     };
 }
 #endif //SPACEINVADERS_SDLFACTORY_H

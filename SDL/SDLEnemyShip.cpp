@@ -86,6 +86,8 @@ namespace Si_sdl {
         open = true;
         openCounter = FRAMES_PER_SECOND / 2;
         destroyed = false;
+        explosion = Mix_LoadWAV("../Sounds/explosion.wav");
+        Mix_VolumeChunk(explosion, 16);
     }
 
     SDLEnemyShip::~SDLEnemyShip() {
@@ -97,9 +99,12 @@ namespace Si_sdl {
         closedClip = nullptr;
         delete explosionClip;
         explosionClip = nullptr;
+        Mix_FreeChunk(explosion);
+        explosion = nullptr;
     }
 
     void SDLEnemyShip::destroy() {
+        Mix_PlayChannel(-1, explosion, 0);
         destroyed = true;
         openCounter = FRAMES_PER_SECOND / 2;
     }

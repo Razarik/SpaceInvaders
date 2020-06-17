@@ -9,6 +9,7 @@
 #include "../Game/PlayerShip.h"
 #include "../GameConstants.h"
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_mixer.h>
 
 namespace Si_sdl {
     class SDLPlayerShip : public Si::PlayerShip {
@@ -16,6 +17,8 @@ namespace Si_sdl {
         SDL_Rect *clip;
         SDL_Renderer *renderer;
         SDL_Texture *texture;
+        Mix_Chunk *warning;
+        Mix_Chunk *explosion;
 
         int pixelWidth;
         int pixelHeight;
@@ -28,6 +31,8 @@ namespace Si_sdl {
         void visualise();
 
         void destroy();
+
+        void getHit();
     };
 }
 

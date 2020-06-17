@@ -8,6 +8,7 @@
 #include "../Game/EnemyShip.h"
 #include "../GameConstants.h"
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_mixer.h>
 
 
 namespace Si_sdl {
@@ -23,6 +24,7 @@ namespace Si_sdl {
         bool open;
         int openCounter;
         bool destroyed;
+        Mix_Chunk *explosion;
     public:
         SDLEnemyShip(double x, double y, int type, SDL_Renderer *renderer, SDL_Texture *texture);
 

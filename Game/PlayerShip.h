@@ -10,10 +10,16 @@
 
 namespace Si {
     class PlayerShip : public Player {
+    private:
+        int lives;
     public:
         PlayerShip();
 
         virtual ~PlayerShip();
+
+        int getLives();
+
+        virtual void getHit();
     };
 }
 

@@ -36,7 +36,9 @@ namespace Si {
 
         virtual void showLives(int lives) = 0;
 
-        virtual void textScreen(std::string text) = 0;
+        virtual void textScreen() = 0;
+
+        virtual void setState(int state, int score) = 0;
     };
 }
 

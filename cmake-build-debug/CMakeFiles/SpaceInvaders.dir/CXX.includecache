@@ -67,6 +67,8 @@ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Bonus.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
 SDL2/SDL.h
 -
+SDL2/SDL_mixer.h
+-
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.h
 SDL2/SDL.h
@@ -91,10 +93,10 @@ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyShip.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
 SDL2/SDL.h
 -
+SDL2/SDL_mixer.h
+-
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLFactory.cpp
-iostream
--
 SDLFactory.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLFactory.h
 SDLBonus.h
@@ -121,6 +123,8 @@ SDL2/SDL_image.h
 -
 SDL2/SDL_ttf.h
 -
+SDL2/SDL_mixer.h
+-
 string
 -
 
@@ -138,6 +142,8 @@ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/PlayerShip.h
 ../GameConstants.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
 SDL2/SDL.h
+-
+SDL2/SDL_mixer.h
 -
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/main.cpp

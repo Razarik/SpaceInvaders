@@ -23,6 +23,8 @@ namespace Si_sdl {
         this->texture = texture;
         explodeTimer = FRAMES_PER_SECOND / 2;
         destroyed = false;
+        explosion = Mix_LoadWAV("../Sounds/explosion.wav");
+        Mix_VolumeChunk(explosion, 16);
     }
 
     SDLBonus::~SDLBonus() {
@@ -32,6 +34,8 @@ namespace Si_sdl {
         clip = nullptr;
         delete explosionClip;
         explosionClip = nullptr;
+        Mix_FreeChunk(explosion);
+        explosion = nullptr;
     }
 
     void SDLBonus::visualise() {
@@ -50,6 +54,7 @@ namespace Si_sdl {
     }
 
     void SDLBonus::destroy() {
+        Mix_PlayChannel(-1, explosion, 0);
         destroyed = true;
     }
 }

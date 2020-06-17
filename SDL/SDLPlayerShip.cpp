@@ -2,19 +2,24 @@
 // Created by Jonas on 24/02/2020.
 //
 
+
 #include "SDLPlayerShip.h"
 
 namespace Si_sdl {
     SDLPlayerShip::SDLPlayerShip(SDL_Renderer *renderer, SDL_Texture *texture) : Si::PlayerShip() {
-        this->pixelHeight = (int) (SCREEN_HEIGHT * height * 0.9);
-        this->pixelWidth = (int) (SCREEN_WIDTH * width);
+        pixelHeight = (int) (SCREEN_HEIGHT * height * 0.9);
+        pixelWidth = (int) (SCREEN_WIDTH * width);
         this->renderer = renderer;
-        this->clip = new SDL_Rect();
+        clip = new SDL_Rect();
         clip->x = 202;
         clip->y = 82;
         clip->w = 52;
         clip->h = 32;
         this->texture = texture;
+        warning = Mix_LoadWAV("../Sounds/warning.wav");
+        Mix_VolumeChunk(warning, 16);
+        explosion = Mix_LoadWAV("../Sounds/explosion_big.wav");
+        Mix_VolumeChunk(explosion, 16);
     }
 
     void SDLPlayerShip::visualise() {
@@ -27,10 +32,23 @@ namespace Si_sdl {
     SDLPlayerShip::~SDLPlayerShip() {
         renderer = nullptr;
         texture = nullptr;
+        delete (clip);
         clip = nullptr;
+        Mix_FreeChunk(warning);
+        warning = nullptr;
     }
 
     void SDLPlayerShip::destroy() {
         active = false;
+    }
+
+    void SDLPlayerShip::getHit() {
+        PlayerShip::getHit();
+        if (getLives() > 0) {
+            Mix_PlayChannel(-1, warning, 0);
+        } else {
+            Mix_PlayChannel(-1, explosion, 0);
+        }
+
     }
 }

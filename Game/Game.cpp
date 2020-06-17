@@ -23,9 +23,6 @@ namespace Si {
         bool quit = false;
         bool pause = true; //starts true for startup screen
 
-        //Set initial message that will be displayed on the screen (only appears on startup)
-        std::string pauseMessage = "- Press SPACE to start -";
-
         //Setup FPS limiter
         int nextGameTick = GetTickCount();
         int sleepTime;
@@ -60,7 +57,6 @@ namespace Si {
             bool drop = false; //Whether alien ships need to drop a level
             int xDir = 1; //Direction the alien ships are going (1 for going right, -1 for left)
             int score = 0; //Player score
-            int lives = 3; //Player lives, game over if reduced to 0
             bool gameOver = false; //Whether the game is finished
             int bonusCounter = 0; //Time since last generated bonus
 
@@ -83,12 +79,13 @@ namespace Si {
                             pause = false;
                             //Set the controller to its active state
                             controller->toggleState(true);
+                            AF->setState(PLAYING, score);
                             break;
                     }
                     //Do necessary setup for graphical implementation
                     AF->tickSetup();
                     //Make the pause screen ready
-                    AF->textScreen(pauseMessage);
+                    AF->textScreen();
                     //Display graphics
                     AF->tickPresent();
 
@@ -120,7 +117,7 @@ namespace Si {
                             //Set the pause condition, set controller to its paused state and set the pause message
                             pause = true;
                             controller->toggleState(false);
-                            pauseMessage = "- Press SPACE to resume -";
+                            AF->setState(PAUSED, score);
                             break;
                         case DEVBULLET:
                             //Testing input, destroy all enemy ships to test win condition
@@ -169,11 +166,10 @@ namespace Si {
                         }
                             //If the bullet collides with the player, subtract one life if there are any left, if not, set Game Over
                         else if (bullet->isColliding(playerShip)) {
-                            if (lives > 1) {
-                                lives--;
-                            } else {
+                            playerShip->getHit();
+                            if (playerShip->getLives() <= 0) {
                                 gameOver = true;
-                                pauseMessage = "- GAME OVER, press SPACE to restart -";
+                                AF->setState(DEFEAT, score);
                                 pause = true;
                                 controller->toggleState(false);
                             }
@@ -210,7 +206,7 @@ namespace Si {
                         //If an enemy ship manages to reach the player or get to the bottom of the screen, set the game over condition
                         if (enemyShip->isColliding(playerShip) || enemyShip->isOffScreen()) {
                             gameOver = true;
-                            pauseMessage = "- GAME OVER, press SPACE to restart -";
+                            AF->setState(DEFEAT, score);
                             pause = true;
                             controller->toggleState(false);
                         }
@@ -240,10 +236,12 @@ namespace Si {
                     }
 
                     //Iterate over all bonuses
-                    for (Bonus *bonus : bonusList) {
-                        //If a bonus is out of bounds, destroy it
+                    for (int i = 0; i < bonusList.size(); i++) {
+                        Bonus *bonus = bonusList.at(i);
+                        //If a bonus is out of bounds, delete it
                         if (bonus->isOffScreen()) {
-                            bonus->destroy();
+                            delete bonus;
+                            bonusList.erase(bonusList.begin() + (i--));
                         } else {
                             //Move the bonus ai its defined speed
                             bonus->move(bonus->getSpeed(), 0);
@@ -251,32 +249,32 @@ namespace Si {
                     }
 
                     //Delete all entities that are no longer active
-                    for (int i=0; i< enemyShipList.size(); i++){
+                    for (int i = 0; i < enemyShipList.size(); i++) {
                         EnemyShip *enemyShip = enemyShipList.at(i);
-                        if (!enemyShip->getActive()){
+                        if (!enemyShip->getActive()) {
                             delete enemyShip;
-                            enemyShipList.erase(enemyShipList.begin() +(i--));
+                            enemyShipList.erase(enemyShipList.begin() + (i--));
                         }
                     }
-                    for (int i=0; i< enemyBulletList.size(); i++){
+                    for (int i = 0; i < enemyBulletList.size(); i++) {
                         EnemyBullet *enemyBullet = enemyBulletList.at(i);
-                        if (!enemyBullet->getActive()){
+                        if (!enemyBullet->getActive()) {
                             delete enemyBullet;
-                            enemyBulletList.erase(enemyBulletList.begin() +(i--));
+                            enemyBulletList.erase(enemyBulletList.begin() + (i--));
                         }
                     }
-                    for (int i=0; i< playerBulletList.size(); i++){
+                    for (int i = 0; i < playerBulletList.size(); i++) {
                         PlayerBullet *playerBullet = playerBulletList.at(i);
-                        if (!playerBullet->getActive()){
+                        if (!playerBullet->getActive()) {
                             delete playerBullet;
-                            playerBulletList.erase(playerBulletList.begin() +(i--));
+                            playerBulletList.erase(playerBulletList.begin() + (i--));
                         }
                     }
-                    for (int i=0; i< bonusList.size(); i++){
+                    for (int i = 0; i < bonusList.size(); i++) {
                         Bonus *bonus = bonusList.at(i);
-                        if (!bonus->getActive()){
+                        if (!bonus->getActive()) {
                             delete bonus;
-                            bonusList.erase(bonusList.begin() +(i--));
+                            bonusList.erase(bonusList.begin() + (i--));
                         }
                     }
 
@@ -284,7 +282,7 @@ namespace Si {
                     //Check to see if all enemy ships have been defeated
                     if (enemyShipList.empty()) {
                         gameOver = true;
-                        pauseMessage = "- Score: " + std::to_string(score) + ", press SPACE to restart -";
+                        AF->setState(VICTORY, score);
                         pause = true;
                         controller->toggleState(false);
                     }
@@ -309,7 +307,7 @@ namespace Si {
 
                     //Visualise the score and lives
                     AF->updateScore(score);
-                    AF->showLives(lives);
+                    AF->showLives(playerShip->getLives());
 
                     //Present graphics
                     AF->tickPresent();
