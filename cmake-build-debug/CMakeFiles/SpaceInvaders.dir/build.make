@@ -308,6 +308,34 @@ CMakeFiles/SpaceInvaders.dir/SDL/SDLBonus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/SDL/SDLBonus.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jonas\CLionProjects\SpaceInvaders\SDL\SDLBonus.cpp -o CMakeFiles\SpaceInvaders.dir\SDL\SDLBonus.cpp.s
 
+CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
+CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
+CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.obj: ../Game/EnemyBoss.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jonas\CLionProjects\SpaceInvaders\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\Game\EnemyBoss.cpp.obj -c C:\Users\Jonas\CLionProjects\SpaceInvaders\Game\EnemyBoss.cpp
+
+CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jonas\CLionProjects\SpaceInvaders\Game\EnemyBoss.cpp > CMakeFiles\SpaceInvaders.dir\Game\EnemyBoss.cpp.i
+
+CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jonas\CLionProjects\SpaceInvaders\Game\EnemyBoss.cpp -o CMakeFiles\SpaceInvaders.dir\Game\EnemyBoss.cpp.s
+
+CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.obj: CMakeFiles/SpaceInvaders.dir/flags.make
+CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.obj: CMakeFiles/SpaceInvaders.dir/includes_CXX.rsp
+CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.obj: ../SDL/SDLEnemyBoss.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jonas\CLionProjects\SpaceInvaders\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\SpaceInvaders.dir\SDL\SDLEnemyBoss.cpp.obj -c C:\Users\Jonas\CLionProjects\SpaceInvaders\SDL\SDLEnemyBoss.cpp
+
+CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jonas\CLionProjects\SpaceInvaders\SDL\SDLEnemyBoss.cpp > CMakeFiles\SpaceInvaders.dir\SDL\SDLEnemyBoss.cpp.i
+
+CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jonas\CLionProjects\SpaceInvaders\SDL\SDLEnemyBoss.cpp -o CMakeFiles\SpaceInvaders.dir\SDL\SDLEnemyBoss.cpp.s
+
 # Object files for target SpaceInvaders
 SpaceInvaders_OBJECTS = \
 "CMakeFiles/SpaceInvaders.dir/main.cpp.obj" \
@@ -327,7 +355,9 @@ SpaceInvaders_OBJECTS = \
 "CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyShip.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/SDL/SDLPlayerBullet.cpp.obj" \
 "CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBullet.cpp.obj" \
-"CMakeFiles/SpaceInvaders.dir/SDL/SDLBonus.cpp.obj"
+"CMakeFiles/SpaceInvaders.dir/SDL/SDLBonus.cpp.obj" \
+"CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.obj" \
+"CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.obj"
 
 # External object files for target SpaceInvaders
 SpaceInvaders_EXTERNAL_OBJECTS =
@@ -350,12 +380,14 @@ SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyShip.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/SDL/SDLPlayerBullet.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBullet.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/SDL/SDLBonus.cpp.obj
+SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.obj
+SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.obj
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/build.make
 SpaceInvaders.exe: C:/MinGW/lib/libSDL2.dll.a
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/linklibs.rsp
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/objects1.rsp
 SpaceInvaders.exe: CMakeFiles/SpaceInvaders.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Jonas\CLionProjects\SpaceInvaders\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable SpaceInvaders.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Jonas\CLionProjects\SpaceInvaders\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable SpaceInvaders.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SpaceInvaders.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

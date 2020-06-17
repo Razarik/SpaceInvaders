@@ -12,6 +12,7 @@
 #include "PlayerBullet.h"
 #include "EnemyBullet.h"
 #include "Bonus.h"
+#include "EnemyBoss.h"
 
 namespace Si {
     class AbstractFactory {
@@ -27,6 +28,8 @@ namespace Si {
         virtual EnemyBullet* createEnemyBullet(double x, double y, double width, double height, double speed) = 0;
 
         virtual Bonus* createBonus(double x, int points, double speed) = 0;
+
+        virtual EnemyBoss* createEnemyBoss() = 0;
 
         virtual void tickSetup() = 0;
 

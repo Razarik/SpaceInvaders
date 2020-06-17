@@ -11,6 +11,7 @@
 #include "SDLEnemyShip.h"
 #include "SDLPlayerBullet.h"
 #include "SDLEnemyBullet.h"
+#include "SDLEnemyBoss.h"
 #include "../GameConstants.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
@@ -33,6 +34,7 @@ namespace Si_sdl {
         Mix_Chunk* gameOver;
         Mix_Chunk* victory;
         std::string pauseMessage;
+        Mix_Music* music;
     public:
         SDLFactory();
 
@@ -49,6 +51,8 @@ namespace Si_sdl {
         Si::EnemyBullet* createEnemyBullet(double x, double y, double width, double height, double speed);
 
         Si::Bonus* createBonus(double x, int points, double speed);
+
+        Si::EnemyBoss* createEnemyBoss();
 
         void tickSetup();
 

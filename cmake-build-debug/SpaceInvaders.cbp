@@ -103,6 +103,12 @@
 		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
+		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBoss.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBoss.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
 		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.cpp">
 			<Option target="SpaceInvaders"/>
 		</Unit>
@@ -158,6 +164,12 @@
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.h">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBoss.cpp">
+			<Option target="SpaceInvaders"/>
+		</Unit>
+		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBoss.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
 		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBullet.cpp">

@@ -32,6 +32,9 @@ namespace Si_sdl {
         Mix_VolumeChunk(gameOver, 128);
         victory = Mix_LoadWAV("../Sounds/victory.wav");
         Mix_VolumeChunk(victory, 64);
+        music=Mix_LoadMUS("../Sounds/music.wav");
+        Mix_VolumeMusic(32);
+        Mix_PlayMusic(music, -1);
     }
 
     Si::PlayerShip* SDLFactory::createPlayerShip() {
@@ -55,6 +58,7 @@ namespace Si_sdl {
         Mix_FreeChunk(pew);
         Mix_FreeChunk(gameOver);
         Mix_FreeChunk(victory);
+        Mix_FreeMusic(music);
         window = nullptr;
         renderer = nullptr;
         texture = nullptr;
@@ -62,6 +66,7 @@ namespace Si_sdl {
         pew = nullptr;
         gameOver = nullptr;
         victory = nullptr;
+        music = nullptr;
         IMG_Quit();
         SDL_Quit();
         TTF_Quit();
@@ -148,5 +153,9 @@ namespace Si_sdl {
             default:
                 break;
         }
+    }
+
+    Si::EnemyBoss* SDLFactory::createEnemyBoss() {
+        return new SDLEnemyBoss(renderer, texture);
     }
 }

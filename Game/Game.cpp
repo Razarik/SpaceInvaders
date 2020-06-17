@@ -9,6 +9,7 @@
 #include <random>
 #include "Game.h"
 #include "../GameConstants.h"
+#include "EnemyBoss.h"
 
 namespace Si {
     Game* Game::instance = nullptr;
@@ -53,17 +54,22 @@ namespace Si {
             // Create the player ship
             PlayerShip* playerShip = AF->createPlayerShip();
 
+            EnemyBoss* boss = AF->createEnemyBoss();
+
             // Set initial values for certain game variables
             bool drop = false;              // Whether alien ships need to drop a level
             int xDir = 1;                   // Direction the alien ships are going (1 for going right, -1 for left)
             int score = 0;                  // Player score
             bool gameOver = false;          // Whether the game is finished
             int bonusCounter = 0;           // Time since last generated bonus
+            bool bossFight = false;
+            int pauseCounter = 0;
 
             // Main game loop
             while (!quit && !restart) {
                 // When the game is paused, display a blinking pause text
                 if (pause) {
+                    pauseCounter++;
                     // Check the controller to see when the game is resumed
                     switch (controller->update()) {
                         // Player exited the game
@@ -71,15 +77,18 @@ namespace Si {
                             quit = true;
                             break;
                         case UNPAUSE :
-                            // If the game was over, set restart condition
-                            if (gameOver) {
-                                restart = true;
+                            if (pauseCounter >= 30) {
+                                // If the game was over, set restart condition
+                                if (gameOver) {
+                                    restart = true;
+                                }
+                                // Unpause game
+                                pause = false;
+                                // Set the controller to its active state
+                                controller->toggleState(true);
+                                AF->setState(PLAYING, score);
+                                pauseCounter = 0;
                             }
-                            // Unpause game
-                            pause = false;
-                            // Set the controller to its active state
-                            controller->toggleState(true);
-                            AF->setState(PLAYING, score);
                             break;
                         default :
                             break;
@@ -285,10 +294,38 @@ namespace Si {
 
                     // Check to see if all enemy ships have been defeated
                     if (enemyShipList.empty()) {
-                        gameOver = true;
-                        AF->setState(VICTORY, score);
-                        pause = true;
-                        controller->toggleState(false);
+                        bossFight = true;
+                    }
+
+                    if (bossFight) {
+                        if (boss->getHealth() <= 0) {
+                            gameOver = true;
+                            AF->setState(VICTORY, score);
+                            pause = true;
+                            controller->toggleState(false);
+                        } else {
+                            for (PlayerBullet* bullet : playerBulletList) {
+                                if (bullet->isColliding(boss)) {
+                                    boss->hit();
+                                    bullet->destroy();
+                                    score += 100;
+                                }
+                            }
+                            boss->move(0, 0.0003);
+                            if (boss->getReload() <= 0) {
+                                enemyBulletList.push_back(
+                                        AF->createEnemyBullet(boss->getBulletX(), boss->getYPos(), 0.005, 0.025,
+                                                              0.002));
+                            } else {
+                                boss->decrementReload();
+                            }
+                            if (boss->isColliding(playerShip) || boss->isOffScreen()) {
+                                gameOver = true;
+                                AF->setState(DEFEAT, score);
+                                pause = true;
+                                controller->toggleState(false);
+                            }
+                        }
                     }
 
                     // Do necessary setup for graphical implementation
@@ -308,6 +345,9 @@ namespace Si {
                         bonus->visualise();
                     }
                     playerShip->visualise();
+                    if (bossFight) {
+                        boss->visualise();
+                    }
 
                     // Visualise the score and lives
                     AF->updateScore(score);
@@ -344,6 +384,8 @@ namespace Si {
 
             // Delete pointer to playerShip
             delete playerShip;
+
+            delete boss;
 
             restart = false; // Resetting is done
         }

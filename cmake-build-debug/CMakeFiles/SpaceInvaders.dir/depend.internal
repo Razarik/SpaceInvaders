@@ -12,6 +12,11 @@ CMakeFiles/SpaceInvaders.dir/Game/Enemy.cpp.obj
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.cpp
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
+CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.obj
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBoss.cpp
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBoss.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
 CMakeFiles/SpaceInvaders.dir/Game/EnemyBullet.cpp.obj
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.cpp
@@ -30,6 +35,7 @@ CMakeFiles/SpaceInvaders.dir/Game/Game.cpp.obj
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Bonus.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Controller.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBoss.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyShip.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
@@ -64,6 +70,13 @@ CMakeFiles/SpaceInvaders.dir/SDL/SDLController.cpp.obj
  C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.cpp
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.h
+CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.obj
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBoss.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBoss.cpp
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBoss.h
 CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBullet.cpp.obj
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.h
@@ -83,6 +96,7 @@ CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Bonus.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Controller.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBoss.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyShip.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
@@ -92,6 +106,7 @@ CMakeFiles/SpaceInvaders.dir/SDL/SDLFactory.cpp.obj
  C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLBonus.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBoss.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBullet.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyShip.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLFactory.cpp
@@ -117,6 +132,7 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Bonus.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Controller.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBoss.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyShip.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
@@ -126,6 +142,7 @@ CMakeFiles/SpaceInvaders.dir/main.cpp.obj
  C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/PlayerShip.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.h
+ C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBoss.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBullet.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyShip.h
  C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLFactory.h

@@ -27,10 +27,6 @@ namespace Si {
 
         void resetReload(int shipsRemaining);
 
-        void adaptReload(int shipsRemaining);
-
-        int getType();
-
         double getBulletWidth();
 
         double getBulletHeight();

@@ -36,6 +36,8 @@ namespace Si_sdl {
         clip = nullptr;
         Mix_FreeChunk(warning);
         warning = nullptr;
+        Mix_FreeChunk(explosion);
+        explosion = nullptr;
     }
 
     void SDLPlayerShip::destroy() {

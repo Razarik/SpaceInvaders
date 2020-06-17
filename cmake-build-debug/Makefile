@@ -203,6 +203,33 @@ Game/Enemy.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Game/Enemy.cpp.s
 .PHONY : Game/Enemy.cpp.s
 
+Game/EnemyBoss.obj: Game/EnemyBoss.cpp.obj
+
+.PHONY : Game/EnemyBoss.obj
+
+# target to build an object file
+Game/EnemyBoss.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.obj
+.PHONY : Game/EnemyBoss.cpp.obj
+
+Game/EnemyBoss.i: Game/EnemyBoss.cpp.i
+
+.PHONY : Game/EnemyBoss.i
+
+# target to preprocess a source file
+Game/EnemyBoss.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.i
+.PHONY : Game/EnemyBoss.cpp.i
+
+Game/EnemyBoss.s: Game/EnemyBoss.cpp.s
+
+.PHONY : Game/EnemyBoss.s
+
+# target to generate assembly for a file
+Game/EnemyBoss.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.s
+.PHONY : Game/EnemyBoss.cpp.s
+
 Game/EnemyBullet.obj: Game/EnemyBullet.cpp.obj
 
 .PHONY : Game/EnemyBullet.obj
@@ -446,6 +473,33 @@ SDL/SDLController.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/SDLController.cpp.s
 .PHONY : SDL/SDLController.cpp.s
 
+SDL/SDLEnemyBoss.obj: SDL/SDLEnemyBoss.cpp.obj
+
+.PHONY : SDL/SDLEnemyBoss.obj
+
+# target to build an object file
+SDL/SDLEnemyBoss.cpp.obj:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.obj
+.PHONY : SDL/SDLEnemyBoss.cpp.obj
+
+SDL/SDLEnemyBoss.i: SDL/SDLEnemyBoss.cpp.i
+
+.PHONY : SDL/SDLEnemyBoss.i
+
+# target to preprocess a source file
+SDL/SDLEnemyBoss.cpp.i:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.i
+.PHONY : SDL/SDLEnemyBoss.cpp.i
+
+SDL/SDLEnemyBoss.s: SDL/SDLEnemyBoss.cpp.s
+
+.PHONY : SDL/SDLEnemyBoss.s
+
+# target to generate assembly for a file
+SDL/SDLEnemyBoss.cpp.s:
+	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/SDL/SDLEnemyBoss.cpp.s
+.PHONY : SDL/SDLEnemyBoss.cpp.s
+
 SDL/SDLEnemyBullet.obj: SDL/SDLEnemyBullet.cpp.obj
 
 .PHONY : SDL/SDLEnemyBullet.obj
@@ -626,6 +680,9 @@ help:
 	@echo ... Game/Enemy.obj
 	@echo ... Game/Enemy.i
 	@echo ... Game/Enemy.s
+	@echo ... Game/EnemyBoss.obj
+	@echo ... Game/EnemyBoss.i
+	@echo ... Game/EnemyBoss.s
 	@echo ... Game/EnemyBullet.obj
 	@echo ... Game/EnemyBullet.i
 	@echo ... Game/EnemyBullet.s
@@ -653,6 +710,9 @@ help:
 	@echo ... SDL/SDLController.obj
 	@echo ... SDL/SDLController.i
 	@echo ... SDL/SDLController.s
+	@echo ... SDL/SDLEnemyBoss.obj
+	@echo ... SDL/SDLEnemyBoss.i
+	@echo ... SDL/SDLEnemyBoss.s
 	@echo ... SDL/SDLEnemyBullet.obj
 	@echo ... SDL/SDLEnemyBullet.i
 	@echo ... SDL/SDLEnemyBullet.s

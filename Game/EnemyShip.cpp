@@ -49,14 +49,6 @@ namespace Si {
         return reload;
     }
 
-    void EnemyShip::adaptReload(int shipsRemaining) {
-        reload = (int) (double(shipsRemaining) / 55.0) * reload;
-    }
-
-    int EnemyShip::getType() {
-        return type;
-    }
-
     double EnemyShip::getBulletHeight() {
         return bulletHeight;
     }
