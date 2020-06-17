@@ -12,13 +12,13 @@
 namespace Si_sdl {
     class SDLPlayerBullet : public Si::PlayerBullet {
     private:
-        SDL_Rect *clip;
-        SDL_Renderer *renderer;
-        SDL_Texture *texture;
+        SDL_Rect* clip;
+        SDL_Renderer* renderer;
+        SDL_Texture* texture;
         int pixelWidth;
         int pixelHeight;
     public:
-        SDLPlayerBullet(double x, SDL_Renderer *renderer, SDL_Texture *texture);
+        SDLPlayerBullet(double x, SDL_Renderer* renderer, SDL_Texture* texture);
 
         ~SDLPlayerBullet();
 

@@ -40,7 +40,7 @@ namespace Si {
 
         bool isOffScreen();
 
-        bool isColliding(Entity *entity);
+        bool isColliding(Entity* entity);
 
         virtual void destroy() = 0;
 

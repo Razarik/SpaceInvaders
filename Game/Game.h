@@ -11,14 +11,14 @@
 namespace Si {
     class Game {
     private:
-        static Game *instance;
-        AbstractFactory *AF;
+        static Game* instance;
+        AbstractFactory* AF;
 
-        Game(AbstractFactory *F);
+        Game(AbstractFactory* F);
 
 
     public:
-        static Game *getInstance(AbstractFactory *F);
+        static Game* getInstance(AbstractFactory* F);
 
         void run();
 

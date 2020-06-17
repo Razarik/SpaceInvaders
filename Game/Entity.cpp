@@ -70,7 +70,7 @@ namespace Si {
         return (xpos - (width / 2) > 1 || xpos + (width / 2) < 0 || ypos - (height / 2) > 1 || ypos + (height / 2) < 0);
     }
 
-    bool Entity::isColliding(Entity *entity) {
+    bool Entity::isColliding(Entity* entity) {
         return ((xpos + (width / 2) >= entity->getXPos() - (entity->getWidth() / 2)) &&
                 (xpos - (width / 2) <= entity->getXPos() + (entity->getWidth() / 2)) &&
                 (ypos + (height / 2) >= entity->getYPos() - (entity->getHeight() / 2) &&

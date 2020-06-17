@@ -32,9 +32,9 @@ namespace Si_sdl {
                             return IDLE;
                     }
                 }
-                //If the game is paused
-                else{
-                    switch (e.key.keysym.sym){
+                    //If the game is paused
+                else {
+                    switch (e.key.keysym.sym) {
                         case SDLK_SPACE:
                             return UNPAUSE;
                         default:

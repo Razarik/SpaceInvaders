@@ -15,17 +15,17 @@
 namespace Si_sdl {
     class SDLBonus : public Si::Bonus {
     private:
-        SDL_Rect *clip;
-        SDL_Rect *explosionClip;
-        SDL_Renderer *renderer;
-        SDL_Texture *texture;
+        SDL_Rect* clip;
+        SDL_Rect* explosionClip;
+        SDL_Renderer* renderer;
+        SDL_Texture* texture;
         int pixelWidth;
         int pixelHeight;
         int explodeTimer;
         bool destroyed;
-        Mix_Chunk *explosion;
+        Mix_Chunk* explosion;
     public:
-        SDLBonus(double x, int points, double speed, SDL_Renderer *renderer, SDL_Texture *texture);
+        SDLBonus(double x, int points, double speed, SDL_Renderer* renderer, SDL_Texture* texture);
 
         ~SDLBonus();
 

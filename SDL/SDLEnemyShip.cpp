@@ -29,7 +29,7 @@ namespace Si_sdl {
         }
     }
 
-    SDLEnemyShip::SDLEnemyShip(double x, double y, int type, SDL_Renderer *renderer, SDL_Texture *texture)
+    SDLEnemyShip::SDLEnemyShip(double x, double y, int type, SDL_Renderer* renderer, SDL_Texture* texture)
             : Si::EnemyShip(x, y, type) {
         this->pixelHeight = (int) (SCREEN_HEIGHT * height * 0.9);
         this->pixelWidth = (int) (SCREEN_WIDTH * width);

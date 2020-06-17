@@ -14,17 +14,17 @@
 namespace Si_sdl {
     class SDLPlayerShip : public Si::PlayerShip {
     private:
-        SDL_Rect *clip;
-        SDL_Renderer *renderer;
-        SDL_Texture *texture;
-        Mix_Chunk *warning;
-        Mix_Chunk *explosion;
+        SDL_Rect* clip;
+        SDL_Renderer* renderer;
+        SDL_Texture* texture;
+        Mix_Chunk* warning;
+        Mix_Chunk* explosion;
 
         int pixelWidth;
         int pixelHeight;
 
     public:
-        SDLPlayerShip(SDL_Renderer *renderer, SDL_Texture *texture);
+        SDLPlayerShip(SDL_Renderer* renderer, SDL_Texture* texture);
 
         ~SDLPlayerShip();
 

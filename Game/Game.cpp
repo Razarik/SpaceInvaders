@@ -11,9 +11,9 @@
 #include "../GameConstants.h"
 
 namespace Si {
-    Game *Game::instance = nullptr;
+    Game* Game::instance = nullptr;
 
-    Game::Game(AbstractFactory *F) {
+    Game::Game(AbstractFactory* F) {
         AF = F;
     }
 
@@ -28,11 +28,11 @@ namespace Si {
         int sleepTime;
 
         //Initialisation
-        Controller *controller = AF->createController();
-        std::vector<EnemyShip *> enemyShipList;
-        std::vector<PlayerBullet *> playerBulletList;
-        std::vector<EnemyBullet *> enemyBulletList;
-        std::vector<Bonus *> bonusList;
+        Controller* controller = AF->createController();
+        std::vector<EnemyShip*> enemyShipList;
+        std::vector<PlayerBullet*> playerBulletList;
+        std::vector<EnemyBullet*> enemyBulletList;
+        std::vector<Bonus*> bonusList;
 
         //Setup random generator to generate chances
         std::random_device rand;
@@ -45,13 +45,13 @@ namespace Si {
             for (int row = 0; row < 5; row++) {
                 for (int column = 0; column < 11; column++) {
                     //Create enemy ships at their row and column position and set their type according to their row
-                    EnemyShip *enemyShip = AF->createEnemyShip((column + 1) * 0.06, (row + 1) * 0.06, (row % 3));
+                    EnemyShip* enemyShip = AF->createEnemyShip((column + 1) * 0.06, (row + 1) * 0.06, (row % 3));
                     //Add ship to the list
                     enemyShipList.push_back(enemyShip);
                 }
             }
             //Create the player ship
-            PlayerShip *playerShip = AF->createPlayerShip();
+            PlayerShip* playerShip = AF->createPlayerShip();
 
             //Set initial values for certain game variables
             bool drop = false; //Whether alien ships need to drop a level
@@ -109,7 +109,7 @@ namespace Si {
                         case SHOOT:
                             //If there is no player bullet on screen, generate one at the x position of the player ship
                             if (playerBulletList.empty()) {
-                                PlayerBullet *bullet = AF->createPlayerBullet(playerShip->getXPos());
+                                PlayerBullet* bullet = AF->createPlayerBullet(playerShip->getXPos());
                                 playerBulletList.push_back(bullet);
                             }
                             break;
@@ -121,14 +121,14 @@ namespace Si {
                             break;
                         case DEVBULLET:
                             //Testing input, destroy all enemy ships to test win condition
-                            for (EnemyShip *ship : enemyShipList) {
+                            for (EnemyShip* ship : enemyShipList) {
                                 ship->destroy();
                                 score += 100;
                             }
                     }
 
                     //Iterate over all player bullets (which will be maximum one because of the condition on generating one)
-                    for (PlayerBullet *bullet : playerBulletList) {
+                    for (PlayerBullet* bullet : playerBulletList) {
                         //If the bullet goes offscreen, destroy it and subtract points from the score
                         if (bullet->isOffScreen()) {
                             bullet->destroy();
@@ -137,7 +137,7 @@ namespace Si {
                             //See if the bullet has collided with aliens or a bonus
                         else {
                             //Iterate over all enemy ships
-                            for (EnemyShip *ship : enemyShipList) {
+                            for (EnemyShip* ship : enemyShipList) {
                                 //If the bullet is colliding with a ship, destroy the ship and add points to the score
                                 if (bullet->isColliding(ship)) {
                                     ship->destroy();
@@ -146,7 +146,7 @@ namespace Si {
                                 }
                             }
                             //Iterate over all bonuses
-                            for (Bonus *bonus : bonusList) {
+                            for (Bonus* bonus : bonusList) {
                                 //If the bullet is colliding with a bonus, destroy the bonus and add points to the score
                                 if (bullet->isColliding(bonus)) {
                                     score += bonus->getPoints();
@@ -159,7 +159,7 @@ namespace Si {
                     }
 
                     //Iterate over all enemy bullets
-                    for (EnemyBullet *bullet : enemyBulletList) {
+                    for (EnemyBullet* bullet : enemyBulletList) {
                         //If the bullet is offscreen, destroy it
                         if (bullet->isOffScreen()) {
                             bullet->destroy();
@@ -188,7 +188,7 @@ namespace Si {
                     //Reset dropping to default false
                     drop = false;
                     //Iterate over all alien ships
-                    for (EnemyShip *enemyShip : enemyShipList) {
+                    for (EnemyShip* enemyShip : enemyShipList) {
                         //Move ships according to parameters specified above
                         enemyShip->move(xMove, yMove);
                         //If the ship is still reloading, decrement its reload timer
@@ -237,7 +237,7 @@ namespace Si {
 
                     //Iterate over all bonuses
                     for (int i = 0; i < bonusList.size(); i++) {
-                        Bonus *bonus = bonusList.at(i);
+                        Bonus* bonus = bonusList.at(i);
                         //If a bonus is out of bounds, delete it
                         if (bonus->isOffScreen()) {
                             delete bonus;
@@ -250,28 +250,28 @@ namespace Si {
 
                     //Delete all entities that are no longer active
                     for (int i = 0; i < enemyShipList.size(); i++) {
-                        EnemyShip *enemyShip = enemyShipList.at(i);
+                        EnemyShip* enemyShip = enemyShipList.at(i);
                         if (!enemyShip->getActive()) {
                             delete enemyShip;
                             enemyShipList.erase(enemyShipList.begin() + (i--));
                         }
                     }
                     for (int i = 0; i < enemyBulletList.size(); i++) {
-                        EnemyBullet *enemyBullet = enemyBulletList.at(i);
+                        EnemyBullet* enemyBullet = enemyBulletList.at(i);
                         if (!enemyBullet->getActive()) {
                             delete enemyBullet;
                             enemyBulletList.erase(enemyBulletList.begin() + (i--));
                         }
                     }
                     for (int i = 0; i < playerBulletList.size(); i++) {
-                        PlayerBullet *playerBullet = playerBulletList.at(i);
+                        PlayerBullet* playerBullet = playerBulletList.at(i);
                         if (!playerBullet->getActive()) {
                             delete playerBullet;
                             playerBulletList.erase(playerBulletList.begin() + (i--));
                         }
                     }
                     for (int i = 0; i < bonusList.size(); i++) {
-                        Bonus *bonus = bonusList.at(i);
+                        Bonus* bonus = bonusList.at(i);
                         if (!bonus->getActive()) {
                             delete bonus;
                             bonusList.erase(bonusList.begin() + (i--));
@@ -291,16 +291,16 @@ namespace Si {
                     AF->tickSetup();
 
                     //Visualise all entities
-                    for (EnemyShip *enemyShip : enemyShipList) {
+                    for (EnemyShip* enemyShip : enemyShipList) {
                         enemyShip->visualise();
                     }
-                    for (PlayerBullet *playerBullet : playerBulletList) {
+                    for (PlayerBullet* playerBullet : playerBulletList) {
                         playerBullet->visualise();
                     }
-                    for (EnemyBullet *enemyBullet: enemyBulletList) {
+                    for (EnemyBullet* enemyBullet: enemyBulletList) {
                         enemyBullet->visualise();
                     }
-                    for (Bonus *bonus : bonusList) {
+                    for (Bonus* bonus : bonusList) {
                         bonus->visualise();
                     }
                     playerShip->visualise();
@@ -321,19 +321,19 @@ namespace Si {
                 }
             }
             //Delete all pointers in vectors and clear them
-            for (EnemyShip *ship : enemyShipList) {
+            for (EnemyShip* ship : enemyShipList) {
                 delete ship;
             }
             enemyShipList.clear();
-            for (PlayerBullet *bullet : playerBulletList) {
+            for (PlayerBullet* bullet : playerBulletList) {
                 delete bullet;
             }
             playerBulletList.clear();
-            for (EnemyBullet *bullet : enemyBulletList) {
+            for (EnemyBullet* bullet : enemyBulletList) {
                 delete bullet;
             }
             enemyBulletList.clear();
-            for (Bonus *bonus : bonusList) {
+            for (Bonus* bonus : bonusList) {
                 delete bonus;
             }
             bonusList.clear();
@@ -347,7 +347,7 @@ namespace Si {
         delete controller;
     }
 
-    Game *Game::getInstance(AbstractFactory *F) {
+    Game* Game::getInstance(AbstractFactory* F) {
         if (!instance) {
             instance = new Game(F);
         }

@@ -2,7 +2,6 @@
 // Created by Jonas on 24/02/2020.
 //
 
-#include <iostream>
 #include "EnemyShip.h"
 
 namespace Si {
@@ -24,7 +23,7 @@ namespace Si {
                 break;
             case 1:
                 //Fast reloader with fast, small bombs
-                reload = 3* dist(mt);
+                reload = 3 * dist(mt);
                 bulletWidth = 0.0025;
                 bulletHeight = 0.0125;
                 bulletSpeed = 0.004;

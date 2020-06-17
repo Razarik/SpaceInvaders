@@ -22,33 +22,33 @@
 namespace Si_sdl {
     class SDLFactory : public Si::AbstractFactory {
     private:
-        SDL_Window *window;
-        SDL_Renderer *renderer;
-        SDL_Texture *texture;
-        SDL_Texture *background;
-        TTF_Font *font = nullptr;
+        SDL_Window* window;
+        SDL_Renderer* renderer;
+        SDL_Texture* texture;
+        SDL_Texture* background;
+        TTF_Font* font = nullptr;
         bool blink;
         int blinkCounter;
-        Mix_Chunk *pew;
-        Mix_Chunk *gameOver;
-        Mix_Chunk *victory;
+        Mix_Chunk* pew;
+        Mix_Chunk* gameOver;
+        Mix_Chunk* victory;
         std::string pauseMessage;
     public:
         SDLFactory();
 
         ~SDLFactory();
 
-        Si::Controller *createController();
+        Si::Controller* createController();
 
-        Si::PlayerShip *createPlayerShip();
+        Si::PlayerShip* createPlayerShip();
 
-        Si::EnemyShip *createEnemyShip(double x, double y, int reload);
+        Si::EnemyShip* createEnemyShip(double x, double y, int reload);
 
-        Si::PlayerBullet *createPlayerBullet(double x);
+        Si::PlayerBullet* createPlayerBullet(double x);
 
-        Si::EnemyBullet *createEnemyBullet(double x, double y, double width, double height, double speed);
+        Si::EnemyBullet* createEnemyBullet(double x, double y, double width, double height, double speed);
 
-        Si::Bonus *createBonus(double x, int points, double speed);
+        Si::Bonus* createBonus(double x, int points, double speed);
 
         void tickSetup();
 

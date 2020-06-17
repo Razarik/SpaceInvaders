@@ -6,7 +6,7 @@
 
 namespace Si_sdl {
     SDLEnemyBullet::SDLEnemyBullet(double x, double y, double width, double height, double speed,
-                                   SDL_Renderer *renderer, SDL_Texture *texture) : Si::EnemyBullet(
+                                   SDL_Renderer* renderer, SDL_Texture* texture) : Si::EnemyBullet(
             x, y, width, height, speed) {
         this->pixelHeight = (int) (SCREEN_HEIGHT * height * 0.9);
         this->pixelWidth = (int) (SCREEN_WIDTH * width);

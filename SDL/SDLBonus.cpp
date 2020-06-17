@@ -5,8 +5,8 @@
 #include "SDLBonus.h"
 
 namespace Si_sdl {
-    SDLBonus::SDLBonus(double x, int points, double speed, SDL_Renderer *renderer,
-                       SDL_Texture *texture) : Si::Bonus(x, points, speed) {
+    SDLBonus::SDLBonus(double x, int points, double speed, SDL_Renderer* renderer,
+                       SDL_Texture* texture) : Si::Bonus(x, points, speed) {
         pixelHeight = (int) (SCREEN_HEIGHT * height * 0.9);
         pixelWidth = (int) (SCREEN_WIDTH * width);
         this->renderer = renderer;

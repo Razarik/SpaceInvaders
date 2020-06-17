@@ -6,7 +6,7 @@
 
 namespace Si_sdl {
 
-    SDLPlayerBullet::SDLPlayerBullet(double x, SDL_Renderer *renderer, SDL_Texture *texture) : Si::PlayerBullet(x) {
+    SDLPlayerBullet::SDLPlayerBullet(double x, SDL_Renderer* renderer, SDL_Texture* texture) : Si::PlayerBullet(x) {
         this->pixelHeight = (int) (SCREEN_HEIGHT * height * 0.9);
         this->pixelWidth = (int) (SCREEN_WIDTH * width);
         this->renderer = renderer;

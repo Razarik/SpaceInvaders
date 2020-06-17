@@ -6,7 +6,7 @@
 #include "SDLPlayerShip.h"
 
 namespace Si_sdl {
-    SDLPlayerShip::SDLPlayerShip(SDL_Renderer *renderer, SDL_Texture *texture) : Si::PlayerShip() {
+    SDLPlayerShip::SDLPlayerShip(SDL_Renderer* renderer, SDL_Texture* texture) : Si::PlayerShip() {
         pixelHeight = (int) (SCREEN_HEIGHT * height * 0.9);
         pixelWidth = (int) (SCREEN_WIDTH * width);
         this->renderer = renderer;
