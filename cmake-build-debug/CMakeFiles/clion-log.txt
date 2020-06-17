@@ -1,0 +1,4 @@
+C:\Users\Jonas\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-1\201.7846.88\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Jonas\CLionProjects\SpaceInvaders
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/Jonas/CLionProjects/SpaceInvaders/cmake-build-debug
