@@ -131,17 +131,17 @@ namespace Si_sdl {
 
     void SDLFactory::setState(int state, int score) {
         switch (state) {
-            case START:
+            case START :
                 pauseMessage = "- Press SPACE to start -";
                 break;
-            case PAUSED:
+            case PAUSED :
                 pauseMessage = "- Press SPACE to resume -";
                 break;
-            case DEFEAT:
+            case DEFEAT :
                 Mix_PlayChannel(-1, gameOver, 0);
                 pauseMessage = "- GAME OVER, press SPACE to restart -";
                 break;
-            case VICTORY:
+            case VICTORY :
                 Mix_PlayChannel(-1, victory, 0);
                 pauseMessage = "- Score: " + std::to_string(score) + ", press SPACE to restart -";
                 break;

@@ -20,19 +20,35 @@ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.h
 Bonus.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Bonus.h
 
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Bonus.cpp
+Bonus.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Bonus.h
+
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Bonus.h
 Entity.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Controller.h
 
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.cpp
+Enemy.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
+
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
 Entity.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
 
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.cpp
+EnemyBullet.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.h
+
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.h
 Enemy.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
+
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyShip.cpp
+EnemyShip.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyShip.h
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyShip.h
 Enemy.h
@@ -40,25 +56,63 @@ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.h
 random
 -
 
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.cpp
+iostream
+-
+Entity.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
+
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
+
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Game.cpp
+iostream
+-
+sysinfoapi.h
+-
+synchapi.h
+-
+vector
+-
+random
+-
+Game.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Game.h
+../GameConstants.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Game.h
 AbstractFactory.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/AbstractFactory.h
 
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Player.cpp
+Player.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Player.h
+
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Player.h
 Entity.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
 
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/PlayerBullet.cpp
+../Game/PlayerBullet.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/PlayerBullet.h
+
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/PlayerBullet.h
 Player.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Player.h
+
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/PlayerShip.cpp
+../Game/PlayerShip.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/PlayerShip.h
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/PlayerShip.h
 Player.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Player.h
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
+
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLBonus.cpp
+SDLBonus.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLBonus.h
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLBonus.h
 ../Game/Bonus.h
@@ -70,6 +124,10 @@ SDL2/SDL.h
 SDL2/SDL_mixer.h
 -
 
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.cpp
+SDLController.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.h
+
 C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.h
 SDL2/SDL.h
 -
@@ -78,6 +136,10 @@ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Controller.h
 ../GameConstants.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
 
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBullet.cpp
+SDLEnemyBullet.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBullet.h
+
 C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyBullet.h
 ../Game/EnemyBullet.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.h
@@ -85,6 +147,10 @@ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
 SDL2/SDL.h
 -
+
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyShip.cpp
+SDLEnemyShip.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyShip.h
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLEnemyShip.h
 ../Game/EnemyShip.h
@@ -128,6 +194,10 @@ SDL2/SDL_mixer.h
 string
 -
 
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLPlayerBullet.cpp
+SDLPlayerBullet.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLPlayerBullet.h
+
 C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLPlayerBullet.h
 ../Game/PlayerBullet.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/PlayerBullet.h
@@ -135,6 +205,10 @@ C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/PlayerBullet.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
 SDL2/SDL.h
 -
+
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLPlayerShip.cpp
+SDLPlayerShip.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLPlayerShip.h
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLPlayerShip.h
 ../Game/PlayerShip.h

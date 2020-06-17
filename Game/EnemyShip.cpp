@@ -14,33 +14,34 @@ namespace Si {
         std::uniform_int_distribution<int> dist(0, 600);
 
         switch (type) {
-            case 0:
+            case 0 :
                 //Normal enemy
                 reload = 6 * dist(mt);
                 bulletWidth = 0.005;
                 bulletHeight = 0.025;
                 bulletSpeed = 0.002;
                 break;
-            case 1:
+            case 1 :
                 //Fast reloader with fast, small bombs
                 reload = 3 * dist(mt);
                 bulletWidth = 0.0025;
                 bulletHeight = 0.0125;
                 bulletSpeed = 0.004;
                 break;
-            case 2:
+            case 2 :
                 //Slow reloader with slow, big bombs
                 reload = 12 * dist(mt);
                 bulletWidth = 0.01;
                 bulletHeight = 0.05;
                 bulletSpeed = 0.001;
                 break;
-            default:
+            default :
                 //Normally not used, inserted in case of future expansion
                 reload = 6 * dist(mt);
                 bulletWidth = 0.005;
                 bulletHeight = 0.025;
                 bulletSpeed = 0.002;
+                break;
         }
     }
 
@@ -75,17 +76,18 @@ namespace Si {
     void EnemyShip::resetReload(int shipsRemaining) {
         double factor = double(shipsRemaining) / 55.0;
         switch (type) {
-            case 0:
+            case 0 :
                 reload = (int) (factor * 3600);
                 break;
-            case 1:
+            case 1 :
                 reload = (int) (factor * 1800);
                 break;
-            case 2:
+            case 2 :
                 reload = (int) (factor * 7200);
                 break;
-            default:
+            default :
                 reload = (int) (factor * 3600);
+                break;
         }
 
     }

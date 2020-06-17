@@ -18,26 +18,26 @@ namespace Si_sdl {
                 //If the game is running
                 if (enabled) {
                     switch (e.key.keysym.sym) {
-                        case SDLK_RIGHT:
+                        case SDLK_RIGHT :
                             return RIGHT;
-                        case SDLK_LEFT:
+                        case SDLK_LEFT :
                             return LEFT;
-                        case SDLK_SPACE:
+                        case SDLK_SPACE :
                             return SHOOT;
-                        case SDLK_p:
+                        case SDLK_p :
                             return PAUSE;
-                        case SDLK_x:
+                        case SDLK_x :
                             return DEVBULLET;
-                        default:
+                        default :
                             return IDLE;
                     }
                 }
                     //If the game is paused
                 else {
                     switch (e.key.keysym.sym) {
-                        case SDLK_SPACE:
+                        case SDLK_SPACE :
                             return UNPAUSE;
-                        default:
+                        default :
                             return IDLE;
                     }
                 }

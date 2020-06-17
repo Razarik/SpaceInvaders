@@ -38,7 +38,7 @@ namespace Si_sdl {
         this->closedClip = new SDL_Rect();
         this->explosionClip = new SDL_Rect;
         switch (type) {
-            case 0:
+            case 0 :
                 openClip->x = 17;
                 openClip->y = 19;
                 openClip->w = 54;
@@ -48,7 +48,7 @@ namespace Si_sdl {
                 closedClip->w = 54;
                 closedClip->h = 37;
                 break;
-            case 1:
+            case 1 :
                 openClip->x = 185;
                 openClip->y = 19;
                 openClip->w = 53;
@@ -58,7 +58,7 @@ namespace Si_sdl {
                 closedClip->w = 53;
                 closedClip->h = 37;
                 break;
-            case 2:
+            case 2 :
                 openClip->x = 350;
                 openClip->y = 19;
                 openClip->w = 52;
@@ -68,7 +68,7 @@ namespace Si_sdl {
                 closedClip->w = 52;
                 closedClip->h = 37;
                 break;
-            default:
+            default :
                 openClip->x = 17;
                 openClip->y = 19;
                 openClip->w = 54;
@@ -77,6 +77,7 @@ namespace Si_sdl {
                 closedClip->y = 19;
                 closedClip->w = 54;
                 closedClip->h = 37;
+                break;
         }
         explosionClip->x = 510;
         explosionClip->y = 22;
