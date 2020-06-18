@@ -31,12 +31,13 @@ namespace Si_sdl {
                                (int) (SCREEN_HEIGHT * ((ypos * 0.9) + 0.1) -
                                       (pixelHeight / 2.0)), pixelWidth, pixelHeight};
         SDL_RenderCopy(renderer, texture, clip, &renderQuad);
-        renderQuad.x = SCREEN_WIDTH * 0.3;
+        renderQuad.x = (int) (double(SCREEN_WIDTH) * 0.32);
         renderQuad.y = (int) (SCREEN_HEIGHT * 0.01);
-        renderQuad.w = (int) (SCREEN_WIDTH * 0.4 * getHealth() / 20);
+        renderQuad.w = (int) (SCREEN_WIDTH * 0.36 * getHealth() / 20);
         renderQuad.h = SCREEN_WIDTH * 0.03;
         SDL_SetRenderDrawColor(renderer, 128, 0, 0, 128);
         SDL_RenderFillRect(renderer, &renderQuad);
+        renderQuad.x = (int) (double(SCREEN_WIDTH) * 0.3);
         renderQuad.w = SCREEN_WIDTH * 0.4;
         SDL_RenderCopy(renderer, texture, barClip, &renderQuad);
     }

@@ -13,6 +13,10 @@ namespace Si_sdl {
 
         window = SDL_CreateWindow("Space Invaders", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
                                   SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+        SDL_Surface* icon = IMG_Load("../Images/icon.png");
+        SDL_SetWindowIcon(window, icon);
+        SDL_FreeSurface(icon);
+        delete icon;
         renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
         SDL_Surface* loadedSurface = IMG_Load("../Sprites/alienSprites.png");
         texture = SDL_CreateTextureFromSurface(renderer, loadedSurface);
@@ -32,7 +36,7 @@ namespace Si_sdl {
         Mix_VolumeChunk(gameOver, 128);
         victory = Mix_LoadWAV("../Sounds/victory.wav");
         Mix_VolumeChunk(victory, 64);
-        music=Mix_LoadMUS("../Sounds/music.wav");
+        music = Mix_LoadMUS("../Sounds/music.wav");
         Mix_VolumeMusic(32);
         Mix_PlayMusic(music, -1);
     }
