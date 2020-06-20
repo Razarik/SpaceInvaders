@@ -13,6 +13,7 @@
 
 
 namespace Si_sdl {
+    // A class with the SDL implementation of the Bonus class
     class SDLBonus : public Si::Bonus {
     private:
         SDL_Rect* clip;

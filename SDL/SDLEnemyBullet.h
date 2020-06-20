@@ -10,6 +10,7 @@
 #include <SDL2/SDL.h>
 
 namespace Si_sdl {
+    // The SDL specific implementation of the EnemyBullet class
     class SDLEnemyBullet : public Si::EnemyBullet {
     private:
         SDL_Rect* clip;

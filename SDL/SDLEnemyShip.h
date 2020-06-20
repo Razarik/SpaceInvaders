@@ -12,6 +12,7 @@
 
 
 namespace Si_sdl {
+    // SDL specific implementation of the EnemyShip class
     class SDLEnemyShip : public Si::EnemyShip {
     private:
         SDL_Rect* openClip;

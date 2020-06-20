@@ -6,10 +6,15 @@
 
 
 namespace Si_sdl {
+    /**
+     * Visualise the ship on the screen
+     */
     void SDLEnemyShip::visualise() {
+        // Calculate the position in pixels on the screen
         SDL_Rect renderQuad = {(int) (SCREEN_WIDTH * xpos) - pixelWidth / 2,
                                (int) (SCREEN_HEIGHT * ((ypos * 0.9) + 0.1) -
                                       (pixelHeight / 2.0)), pixelWidth, pixelHeight};
+        // Determine the correct sprite to be rendered
         if (destroyed) {
             SDL_RenderCopy(renderer, texture, explosionClip, &renderQuad);
         } else if (open) {
@@ -17,6 +22,7 @@ namespace Si_sdl {
         } else {
             SDL_RenderCopy(renderer, texture, closedClip, &renderQuad);
         }
+        // Calculate what the next sprite to be shown is
         if (openCounter > 0) {
             openCounter--;
         } else {
@@ -28,15 +34,25 @@ namespace Si_sdl {
             }
         }
     }
-
+    /**
+     * Constructor for the SDL specific implementation of the EnemyShip class
+     *
+     * @param x The x position
+     * @param y The y position
+     * @param type The type of ship
+     * @param renderer The SDL renderer to which to render the ship
+     * @param texture The SDL texture loaded with the sprite sheet holding the ship's sprites
+     */
     SDLEnemyShip::SDLEnemyShip(double x, double y, int type, SDL_Renderer* renderer, SDL_Texture* texture)
             : Si::EnemyShip(x, y, type) {
+        // Calculate the height and width in pixels according to the height and width of the bullet and the screen
         this->pixelHeight = (int) (SCREEN_HEIGHT * height * 0.9);
         this->pixelWidth = (int) (SCREEN_WIDTH * width);
         this->renderer = renderer;
         this->openClip = new SDL_Rect();
         this->closedClip = new SDL_Rect();
         this->explosionClip = new SDL_Rect;
+        // Determine the correct sprite coordinates according to the type of the ship
         switch (type) {
             case 0 :
                 openClip->x = 17;
@@ -79,6 +95,7 @@ namespace Si_sdl {
                 closedClip->h = 37;
                 break;
         }
+        // The coordinates and dimensions of the explosion sprite on the sprite sheet
         explosionClip->x = 510;
         explosionClip->y = 22;
         explosionClip->w = 53;
@@ -87,10 +104,14 @@ namespace Si_sdl {
         open = true;
         openCounter = FRAMES_PER_SECOND / 2;
         destroyed = false;
+        // Load the explosion sound
         explosion = Mix_LoadWAV("../Sounds/explosion.wav");
         Mix_VolumeChunk(explosion, 16);
     }
 
+    /**
+     * Destructor
+     */
     SDLEnemyShip::~SDLEnemyShip() {
         renderer = nullptr;
         texture = nullptr;
@@ -104,6 +125,9 @@ namespace Si_sdl {
         explosion = nullptr;
     }
 
+    /**
+     * Destroys the ship
+     */
     void SDLEnemyShip::destroy() {
         Mix_PlayChannel(-1, explosion, 0);
         destroyed = true;

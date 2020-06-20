@@ -10,6 +10,7 @@
 #include <SDL2/SDL.h>
 
 namespace Si_sdl {
+    // The SDL specific implementation of the PlayerBullet class
     class SDLPlayerBullet : public Si::PlayerBullet {
     private:
         SDL_Rect* clip;

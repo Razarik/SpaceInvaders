@@ -12,6 +12,7 @@
 #include <SDL2/SDL_mixer.h>
 
 namespace Si_sdl {
+    // The SDL specifi implementation of the PlayerShip class
     class SDLPlayerShip : public Si::PlayerShip {
     private:
         SDL_Rect* clip;

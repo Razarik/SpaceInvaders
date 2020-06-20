@@ -10,6 +10,7 @@
 #include "../GameConstants.h"
 
 namespace Si_sdl {
+    // A class with the SDL specific implementation of the Controller class
     class SDLController : public Si::Controller {
     private:
         bool enabled;

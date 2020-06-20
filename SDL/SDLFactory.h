@@ -21,6 +21,7 @@
 
 
 namespace Si_sdl {
+    // A factory which handles the implementation of the game in the SDL engine
     class SDLFactory : public Si::AbstractFactory {
     private:
         SDL_Window* window;

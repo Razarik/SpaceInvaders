@@ -6,6 +6,11 @@
 
 namespace Si_sdl {
 
+    /**
+     * Checks for input and returns the event
+     *
+     * @return The type of event according to user input
+     */
     int SDLController::update() {
         SDL_Event e;
         while (SDL_PollEvent(&e) != 0) {
@@ -13,7 +18,7 @@ namespace Si_sdl {
             if (e.type == SDL_QUIT) {
                 return EXIT;
             }
-                //User presses a key
+            //User presses a key
             else if (e.type == SDL_KEYDOWN) {
                 //If the game is running
                 if (enabled) {
@@ -32,7 +37,7 @@ namespace Si_sdl {
                             return IDLE;
                     }
                 }
-                    //If the game is paused
+                //If the game is paused
                 else {
                     switch (e.key.keysym.sym) {
                         case SDLK_SPACE :
@@ -46,14 +51,25 @@ namespace Si_sdl {
         return 0;
     }
 
+    /**
+     * Sets whether the controller is in its enabled or disabled (paused) state
+     *
+     * @param enabled True for enabled (playing) state, false for disabled (paused) state
+     */
     void SDLController::toggleState(bool enabled) {
         this->enabled = enabled;
     }
 
+    /**
+     * Destructor
+     */
     SDLController::SDLController() {
         enabled = false;
     }
 
+    /**
+     * Constructor for SDL implementation of Controller class
+     */
     SDLController::~SDLController() = default;
 
 

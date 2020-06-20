@@ -11,6 +11,7 @@
 #include "../GameConstants.h"
 
 namespace Si_sdl {
+    // The SDL specific implementation of the EnemyBoss class
     class SDLEnemyBoss : public Si::EnemyBoss {
     private:
         SDL_Rect* clip;
