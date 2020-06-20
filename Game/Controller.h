@@ -6,10 +6,9 @@
 #define SPACEINVADERS_CONTROLLER_H
 
 namespace Si {
+    // Abstract controller class as reference to engine specific input method
     class Controller {
     public:
-        virtual ~Controller();
-
         virtual int update() = 0;
 
         virtual void toggleState(bool enabled) = 0;

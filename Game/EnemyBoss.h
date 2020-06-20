@@ -9,11 +9,12 @@
 #include <random>
 
 namespace Si {
+    // An EnemyBoss is an enemy with health, appearing at the end of the game
     class EnemyBoss : public Enemy {
     private:
         int reload;
         int health;
-        std::mt19937 mt;
+        std::mt19937 mt; // Pseudo random number generator, used to generate random bullet positions
     public:
         EnemyBoss();
 

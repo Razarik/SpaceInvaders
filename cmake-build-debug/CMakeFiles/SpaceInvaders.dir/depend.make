@@ -5,9 +5,6 @@ CMakeFiles/SpaceInvaders.dir/Game/Bonus.cpp.obj: ../Game/Bonus.cpp
 CMakeFiles/SpaceInvaders.dir/Game/Bonus.cpp.obj: ../Game/Bonus.h
 CMakeFiles/SpaceInvaders.dir/Game/Bonus.cpp.obj: ../Game/Entity.h
 
-CMakeFiles/SpaceInvaders.dir/Game/Controller.cpp.obj: ../Game/Controller.cpp
-CMakeFiles/SpaceInvaders.dir/Game/Controller.cpp.obj: ../Game/Controller.h
-
 CMakeFiles/SpaceInvaders.dir/Game/Enemy.cpp.obj: ../Game/Enemy.cpp
 CMakeFiles/SpaceInvaders.dir/Game/Enemy.cpp.obj: ../Game/Enemy.h
 CMakeFiles/SpaceInvaders.dir/Game/Enemy.cpp.obj: ../Game/Entity.h

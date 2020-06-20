@@ -50,6 +50,26 @@ random
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
 
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Game.cpp
+iostream
+-
+sysinfoapi.h
+-
+synchapi.h
+-
+vector
+-
+random
+-
+Game.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Game.h
+../GameConstants.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/GameConstants.h
+
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Game.h
+AbstractFactory.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/AbstractFactory.h
+
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Player.h
 Entity.h
 C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Entity.h
@@ -73,6 +93,10 @@ SDL2/SDL.h
 -
 SDL2/SDL_mixer.h
 -
+
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.cpp
+SDLController.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.h
 
 C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLController.h
 SDL2/SDL.h
@@ -161,4 +185,12 @@ SDL2/SDL.h
 -
 SDL2/SDL_mixer.h
 -
+
+C:/Users/Jonas/CLionProjects/SpaceInvaders/main.cpp
+iostream
+-
+SDL/SDLFactory.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/SDL/SDLFactory.h
+Game/Game.h
+C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Game.h
 

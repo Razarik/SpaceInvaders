@@ -9,6 +9,8 @@
 #include <random>
 
 namespace Si {
+    // En EnemyShip is an Enemy that has one of 3 types. It can shoot bullets with different properties and
+    // different reload times depending on the ship type
     class EnemyShip : public Enemy {
     private:
         int type;

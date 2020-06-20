@@ -91,9 +91,6 @@
 		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Bonus.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>
-		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Controller.cpp">
-			<Option target="SpaceInvaders"/>
-		</Unit>
 		<Unit filename="C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Controller.h">
 			<Option target="SpaceInvaders"/>
 		</Unit>

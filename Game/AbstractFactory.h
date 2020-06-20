@@ -15,6 +15,7 @@
 #include "EnemyBoss.h"
 
 namespace Si {
+    // An abstract factory providing virtual functions to abstract implementation from specific game engine
     class AbstractFactory {
     public:
         virtual Controller* createController() = 0;

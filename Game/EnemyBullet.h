@@ -9,6 +9,7 @@
 #include "Enemy.h"
 
 namespace Si {
+    // An EnemyBullet is a projectile shot by an enemy, which will remove a life from the player if they collide
     class EnemyBullet : public Enemy {
     private:
         double speed;

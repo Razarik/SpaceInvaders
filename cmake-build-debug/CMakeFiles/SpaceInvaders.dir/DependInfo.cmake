@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Bonus.cpp" "C:/Users/Jonas/CLionProjects/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Game/Bonus.cpp.obj"
-  "C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Controller.cpp" "C:/Users/Jonas/CLionProjects/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Game/Controller.cpp.obj"
   "C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/Enemy.cpp" "C:/Users/Jonas/CLionProjects/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Game/Enemy.cpp.obj"
   "C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBoss.cpp" "C:/Users/Jonas/CLionProjects/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.obj"
   "C:/Users/Jonas/CLionProjects/SpaceInvaders/Game/EnemyBullet.cpp" "C:/Users/Jonas/CLionProjects/SpaceInvaders/cmake-build-debug/CMakeFiles/SpaceInvaders.dir/Game/EnemyBullet.cpp.obj"

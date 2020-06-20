@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SpaceInvaders.dir/Game/Bonus.cpp.obj"
-  "CMakeFiles/SpaceInvaders.dir/Game/Controller.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Game/Enemy.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Game/EnemyBoss.cpp.obj"
   "CMakeFiles/SpaceInvaders.dir/Game/EnemyBullet.cpp.obj"

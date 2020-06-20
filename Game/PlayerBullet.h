@@ -9,6 +9,7 @@
 #include "Player.h"
 
 namespace Si {
+    // A class representing all bullets shot by the player
     class PlayerBullet : public Player {
     public:
         PlayerBullet(double x);

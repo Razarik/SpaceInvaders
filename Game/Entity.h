@@ -6,6 +6,7 @@
 #define SPACEINVADERS_ENTITY_H
 
 namespace Si {
+    // A base class for all entities with basic properties
     class Entity {
     protected:
         double xpos;
@@ -25,10 +26,6 @@ namespace Si {
         double getWidth();
 
         double getHeight();
-
-        void setXPos(double newPos);
-
-        void setYPos(double newPos);
 
         void move(double x, double y);
 

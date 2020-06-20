@@ -9,6 +9,7 @@
 #include "Player.h"
 
 namespace Si {
+    // A class representing the ship of the player, keeping a count of the remaining lives
     class PlayerShip : public Player {
     private:
         int lives;

@@ -149,33 +149,6 @@ Game/Bonus.cpp.s:
 	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Game/Bonus.cpp.s
 .PHONY : Game/Bonus.cpp.s
 
-Game/Controller.obj: Game/Controller.cpp.obj
-
-.PHONY : Game/Controller.obj
-
-# target to build an object file
-Game/Controller.cpp.obj:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Game/Controller.cpp.obj
-.PHONY : Game/Controller.cpp.obj
-
-Game/Controller.i: Game/Controller.cpp.i
-
-.PHONY : Game/Controller.i
-
-# target to preprocess a source file
-Game/Controller.cpp.i:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Game/Controller.cpp.i
-.PHONY : Game/Controller.cpp.i
-
-Game/Controller.s: Game/Controller.cpp.s
-
-.PHONY : Game/Controller.s
-
-# target to generate assembly for a file
-Game/Controller.cpp.s:
-	$(MAKE) -f CMakeFiles\SpaceInvaders.dir\build.make CMakeFiles/SpaceInvaders.dir/Game/Controller.cpp.s
-.PHONY : Game/Controller.cpp.s
-
 Game/Enemy.obj: Game/Enemy.cpp.obj
 
 .PHONY : Game/Enemy.obj
@@ -674,9 +647,6 @@ help:
 	@echo ... Game/Bonus.obj
 	@echo ... Game/Bonus.i
 	@echo ... Game/Bonus.s
-	@echo ... Game/Controller.obj
-	@echo ... Game/Controller.i
-	@echo ... Game/Controller.s
 	@echo ... Game/Enemy.obj
 	@echo ... Game/Enemy.i
 	@echo ... Game/Enemy.s

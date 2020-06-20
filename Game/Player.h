@@ -9,6 +9,7 @@
 #include "Entity.h"
 
 namespace Si {
+    // Class that represents all friendly entities
     class Player : public Entity {
     public:
         Player(double x, double y, double width, double height);

@@ -7,8 +7,16 @@
 
 
 #include "AbstractFactory.h"
+#include <iostream>
+#include <sysinfoapi.h>
+#include <synchapi.h>
+#include <vector>
+#include <random>
+#include "../GameConstants.h"
 
 namespace Si {
+    // Class that holds the main game loop and variables
+    // This class is a singleton
     class Game {
     private:
         static Game* instance;
